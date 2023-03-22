@@ -24,6 +24,7 @@ jobs:
         os: [ubuntu-latest]
         package:
           - { user: LuxDL, repo: Lux.jl, group: AMDGPU }
+          - { user: LuxDL, repo: LuxLib.jl, group: AMDGPU }
     if: contains(github.event.pull_request.labels.*.name, 'run downstream test')
     steps:
       - uses: actions/checkout@v3

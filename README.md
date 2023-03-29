@@ -5,6 +5,7 @@
 [![Stable Docs](https://img.shields.io/badge/docs-stable-blue.svg)](http://lux.csail.mit.edu/stable/)
 
 [![CI](https://github.com/LuxDL/LuxAMDGPU.jl/actions/workflows/CI.yml/badge.svg)](https://github.com/LuxDL/LuxAMDGPU.jl/actions/workflows/CI.yml)
+[![Buildkite NVIDIA GPU CI](https://img.shields.io/buildkite/13e78cb0485192627b1f26fecbe74ff4b93ee10a0ef4866261.svg?label=gpu&logo=amd)](https://buildkite.com/julialang/luxamdgpu-dot-jl/)
 [![codecov](https://codecov.io/gh/LuxDL/LuxAMDGPU.jl/branch/main/graph/badge.svg?token=1ZY0A2NPEM)](https://codecov.io/gh/LuxDL/LuxAMDGPU.jl)
 [![Package Downloads](https://shields.io/endpoint?url=https://pkgs.genieframework.com/api/v1/badge/LuxAMDGPU)](https://pkgs.genieframework.com?packages=LuxAMDGPU)
 

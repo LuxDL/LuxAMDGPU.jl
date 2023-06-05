@@ -2,7 +2,7 @@ module LuxAMDGPU
 
 using Reexport
 
-@reexport using AMDGPU, ROCKernels
+@reexport using AMDGPU
 
 const USE_AMD_GPU = Ref{Union{Nothing, Bool}}(nothing)
 
@@ -12,9 +12,8 @@ function _check_use_amdgpu!()
     USE_AMD_GPU[] = AMDGPU.functional()
     if USE_AMD_GPU[]
         if !AMDGPU.functional(:MIOpen)
-            @warn """
-            MIOpen is not functional in AMDGPU.jl, some functionality will not be available.
-            """ maxlog=1
+            @warn "MIOpen is not functional in AMDGPU.jl, some functionality will not be \
+                   available." maxlog=1
         end
     else
         @warn "LuxAMDGPU is loaded but the AMDGPU is not functional." maxlog=1

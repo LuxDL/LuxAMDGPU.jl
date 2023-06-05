@@ -22,7 +22,7 @@ steps:
     matrix:
       setup:
         julia:
-          - "1.9-nightly"
+          - "1"
           - "nightly"
       adjustments:
         - with:

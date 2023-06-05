@@ -14,3 +14,28 @@
 
 `LuxAMDGPU` is meant to be used as a trigger package for all AMDGPU dependencies in `Lux`.
 Users requiring AMDGPU support should install `LuxAMDGPU` and load it alongside `Lux`.
+
+## Installation
+
+`LuxAMDGPU` is a registered package, and can be installed using the Julia package manager:
+
+```julia
+] add LuxAMDGPU
+```
+
+### Using MIOpen
+
+Unfortunately, `AMDGPU.jl` doesn't ship with `MIOpen_jll` binaries. So setting it up is a
+bit more involved.
+
+```bash
+git clone git@github.com:JuliaGPU/AMDGPU.jl.git
+cd AMDGPU.jl
+julia --project=. -e 'using Pkg; Pkg.add("MIOpen_jll")'
+cd ..
+git clone git@github.com:LuxDL/LuxAMDGPU.jl.git
+cd LuxAMDGPU.jl
+julia --project=. -e 'using Pkg; Pkg.dev("../AMDGPU.jl")'
+```
+
+Next, use this installation of `LuxAMDGPU` in your project.

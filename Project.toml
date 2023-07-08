@@ -1,13 +1,13 @@
 name = "LuxAMDGPU"
 uuid = "83120cb1-ca15-4f04-bf3b-6967d2e6b60b"
 authors = ["Avik Pal <avikpal@mit.edu> and contributors"]
-version = "0.1.1"
+version = "0.1.2"
 
 [deps]
 AMDGPU = "21141c5a-9bdb-4563-92ae-f87d6854732e"
 Reexport = "189a3867-3050-52da-a836-e630ba90ab69"
 
 [compat]
-AMDGPU = "0.4.8"
+AMDGPU = "0.5"
 Reexport = "1"
 julia = "1.9"

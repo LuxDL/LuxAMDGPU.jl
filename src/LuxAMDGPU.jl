@@ -2,7 +2,7 @@ module LuxAMDGPU
 
 using Reexport
 
-@reexport using AMDGPU
+@reexport using AMDGPU, AMDGPU.ROCKernels
 
 const USE_AMD_GPU = Ref{Union{Nothing, Bool}}(nothing)
 

@@ -25,11 +25,6 @@ steps:
           setup:
             julia:
               - "1"
-              - "nightly"
-          adjustments:
-            - with:
-                julia: "nightly"
-              soft_fail: true
 
   - group: ":telescope: Downstream AMD GPU"
     steps:
@@ -85,4 +80,6 @@ steps:
               - "LuxLib"
 
 env:
+  RETESTITEMS_NWORKERS: 4
+  RETESTITEMS_NWORKER_THREADS: 2
   SECRET_CODECOV_TOKEN: "pzi+i7ulYT/2ysEUMphrG4sYEgQHCqPiPSCej6OmwUiOE7JzFU1q9PwQ9Cv7q0JT+lgQ090cIkBrN6zgLS7rYF97mkNKqoJvGFMorzQ+ojHU0l2hgJGshAb1oxOOEjzneWEQVLjDp3dAYwmixCEHX2XzOz8usADIsNfKe1zq9r2n0PMlc7lTe6VwOtRvJ+Y2eSpsESGNl95HI35mb+35KjpGT8fyKNJ+QVkUX6zhcwm8BB05KHYrJmb66HUoXkAQUsnRR3FijN/aGFBVNmXdk4AlJvkazL5MSX7y5rzCJgx2nfiPz1ITuIK8Y3N/jH2L75iKs85HZ0TdbhHOno7/Sg==;U2FsdGVkX185y4i2XFeuhLYHK3mcKEPOHzoYChLiJyPYe0egwSC7NvcXYc/aLxNi9CCkt1xQCSK7hKSsdYZcGA=="

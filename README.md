@@ -12,6 +12,20 @@
 [![ColPrac: Contributor's Guide on Collaborative Practices for Community Packages](https://img.shields.io/badge/ColPrac-Contributor's%20Guide-blueviolet)](https://github.com/SciML/ColPrac)
 [![SciML Code Style](https://img.shields.io/static/v1?label=code%20style&message=SciML&color=9558b2&labelColor=389826)](https://github.com/SciML/SciMLStyle)
 
+> [!CAUTION]
+>
+> `LuxAMDPU.jl` was used previously as a means to load `AMDGPU` specific extensions in
+`Lux.jl`. However in most recent versions of `Lux.jl`, these functionalities can be
+directly accessed by simply loading `AMDGPU.jl`. This package is now deprecated.
+>
+> To use the `LuxAMDGPU.functional()` functionality, use `MLDataDevices.functional(LuxAMDGPUDevice)`.
+>
+> If you are not using `LuxAMDGPU.jl` as a direct dependency, please consider
+opening an issue on any packages you are using that do use it as a dependency.
+From Julia 1.9 onwards, you can query `]why LuxAMDGPU` to figure out which
+package originally brings it in as a dependency.
+
+
 `LuxAMDGPU` is meant to be used as a trigger package for all AMDGPU dependencies in `Lux`.
 Users requiring AMDGPU support should install `LuxAMDGPU` and load it alongside `Lux`.
 

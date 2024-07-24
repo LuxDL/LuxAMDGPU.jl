@@ -1,5 +1,23 @@
 module LuxAMDGPU
 
+if ccall(:jl_generating_output, Cint, ()) == 1
+    @warn """
+    DEPRECATION NOTICE
+
+    `LuxAMDPU.jl` was used previously as a means to load `AMDGPU` specific extensions in
+    `Lux.jl`. However in most recent versions of `Lux.jl`, these functionalities can be
+    directly accessed by simply loading `AMDGPU.jl`. This package is now deprecated.
+
+    To use the `LuxAMDGPU.functional()` functionality, use
+    `MLDataDevices.functional(LuxAMDGPUDevice)`.
+
+    If you are not using `LuxAMDGPU.jl` as a direct dependency, please consider
+    opening an issue on any packages you are using that do use it as a dependency.
+    From Julia 1.9 onwards, you can query `]why LuxAMDGPU` to figure out which
+    package originally brings it in as a dependency.
+    """
+end
+
 using Reexport
 
 @reexport using AMDGPU, AMDGPU.ROCKernels
